@@ -15,3 +15,16 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.section4{
+    background-image:url(../images/gplay.png);
+    height: 80vh;
+    background-repeat: repeat;
+
+}
+
+.image-section8{
+    background-image: url(../images/everyone-has-unique-store-bg.jpg);
+    height:700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
