@@ -6,7 +6,25 @@ export default()=>(
             height:25px;
             width:50%;
         }
-       
+        .prog1{
+            background-color:#8b6ba3!important;
+        }
+        .prog2{
+            background-color:#dcdcdc;
+        }
+        
+        .next2,.next3,.next4,.next5{
+            display:none!important;
+        }
+        .next1.d-flex.flex-column.align-items-center{
+            display:none!important;
+        }
+
+
+        .icon{
+            color:rgba(137, 27, 132, 1)!important ;
+            
+            }
         .cc{
             display: flex;
             flex-direction: column;
@@ -44,8 +62,24 @@ export default()=>(
         
         /* section 4 ends here */
         
-        
-  
+        /* section 4 Range Slider */
+        .multislidergreen{
+            height: 40px;
+            border-radius: 30px;
+        }
+        .multisliderpurple{
+            height: 40px;
+            border-radius: 30px;
+        }
+        .multislider{
+            height: 40px;
+            border-radius: 30px;
+        }
+    
+        Dot{
+            height:30px;
+        }
+
 
         `
     }

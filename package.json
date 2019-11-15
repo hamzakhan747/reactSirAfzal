@@ -10,6 +10,7 @@
     "react-bootstrap": "^1.0.0-beta.14",
     "react-collapsible-component": "^1.1.8",
     "react-dom": "^16.11.0",
+    "react-multi-bar-slider": "^1.4.0",
     "react-scripts": "3.2.0"
   },
   "scripts": {
