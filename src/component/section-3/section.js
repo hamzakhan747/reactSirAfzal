@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import Style from '../section-3/style'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import MultiSlider, { Progress, Dot } from 'react-multi-bar-slider'
+import Form from 'react-bootstrap/Form'
 export default ()=>{
     const [progress,setProgress]=useState(100) 
     const handleSlide = newProgress => setProgress( newProgress );
@@ -120,8 +121,11 @@ return (
     </div>
     {/* NEXT 3 */}
     <div className="next2 d-flex flex-column align-items-center" >
-<div className="d-flex justify-content-around">
-<i className="fa fa-chevron-circle-left icon movement-icon1" onClick={()=> previous2()}></i><h5>What is the total value of your debt?</h5>
+<div className="d-flex">
+
+<i className="fa fa-chevron-circle-left icon movement-icon1"  onClick={()=> previous2()}></i>
+<h5>What is the total value of your debt?</h5>
+
 </div>
 
 <div className="row d-flex mt-5">
@@ -282,9 +286,30 @@ return (
 
 <div className="row d-flex mt-5">
             
-            <div className="box1">
-                    <p><b><a>FORM</a></b></p>
+<form className="d-flex flex-column align-items-center">
+            
+            <div className="d-flex flex-column inputs">
+            <input className="inputall" placeholder="First name" />
+            <input className="inputall mt-2" placeholder="Last name"/>
+            <input className="inputall mt-2" placeholder="Email" />
+            <input className="inputall mt-2" placeholder="Mobile"/>
+            
+            <div className="checkbox d-flex mt-1">
+              <Form.Group controlId="formBasicCheckbox">
+              <Form.Check type="checkbox"/>
+              </Form.Group>
+             <p className="ml-3 para-input">I accept the <span className="span2">Privacy Policy</span> and <span className="span2">Terms & Conditions.</span></p>
+           
             </div>
+            
+            </div>
+            <section>
+                      <div className="animated infinite pulse button-section2-move1 clip-div1 d-flex" id="clip-div1">
+                          <button className="btn btn-purple btn-ndh  scroll_btn pulse clip1" id="clip1" onClick={() => next5()}><p class="button-text1">NEXT</p> </button>
+                          <i className="fa fa-chevron-circle-right icon movement-icon1"></i>
+                      </div>
+                      </section> 
+        </form>
 
            
         </div>

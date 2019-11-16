@@ -80,6 +80,44 @@ export default()=>(
             height:30px;
         }
 
+        /* section 4 FORM */
+
+        .inputs {
+            display: flex;
+            align-items: center;
+            padding-top: 1%;
+            
+        }
+        i.fa.fa-chevron-circle-left.icon.movement-icon1 {
+             margin-top: -2px; 
+        }
+
+        .inputall {
+         padding-left:3px;
+         height: 60px;
+         background: #ecf0f2 none repeat scroll 0 0;
+         border: 1px solid #ecf0f2;
+         width:500px;
+         border-radius: 5px;
+        }
+        .para-input{
+            font-weight: bold;    
+                font-size: 19px;
+            
+        }
+        .span2{
+            font-weight: bold;
+            text-decoration: underline;
+            color: #8a1082;
+        }
+        input#formBasicCheckbox {
+            width: 30px;
+            height: 20px;
+        }
+
+
+
+
 
         `
     }
