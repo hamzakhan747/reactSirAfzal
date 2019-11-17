@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../../asserts/images/logo.png'
+import img from '../../asserts/images/cropped-Header-logo-527-148-01.png'
 import Style from '../footer/style'
 import '../../asserts/style/style.css'
 export default ()=>{
@@ -10,7 +10,7 @@ export default ()=>{
             <div className="row">
             <div className="col-md-12">
             <div className="footer-div1">
-            <div className="pt-5"><img src={img}/></div>
+            <div className="pt-5"><img style={{width:"300px"}} src={img}/></div>
             <div className="pt-3"><p>Copyright 2019 National-Debt-Help.org.uk. All Rights Reserved.</p></div>
             <div className="footer-div2 pt-4"><p>National-Debt-Help.org.uk is a trading style of Money Tree Media Limited. Registered office: National Debt Help, 3 Oswin Road, Leicester, LE3 1HR. Money Tree Media Limited is registered with the Information Commissioner Office (No. ZA068562)
             </p>

@@ -115,7 +115,24 @@ export default()=>(
             height: 20px;
         }
 
+// Range New Slider
 
+
+
+span.MuiSlider-rail {
+    height: 30px;
+
+}
+span.MuiSlider-track {
+    height: 30px;
+    background: #8a1082;
+}
+span.MuiSlider-thumbColorPrimary {
+    color: purple!important;
+    width: 40px;
+    height: 40px;
+   
+}
 
 
 

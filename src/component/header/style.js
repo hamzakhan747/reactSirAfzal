@@ -22,9 +22,9 @@ export default()=>(
         {
             color: #8a1082;
             text-decoration: none;
-            font-size: 32px;
+            font-size: 29px;
             font-weight: bold;
-            margin-top: 3px;
+            margin-top: 9px;
             padding: 5px;
         
         }

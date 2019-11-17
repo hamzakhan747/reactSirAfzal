@@ -3,7 +3,57 @@ import Style from '../section-3/style'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import MultiSlider, { Progress, Dot } from 'react-multi-bar-slider'
 import Form from 'react-bootstrap/Form'
+// rangeNew
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import Slider from '@material-ui/core/Slider';
+import Input from '@material-ui/core/Input';
+
+const useStyles = makeStyles({
+    root: {
+      width: 500,
+      
+  },
+    input: {
+      width: 42,
+    },
+    thumbColorPrimary:{
+height:42,
+width:42
+    },
+  });
+  
+
+
+
 export default ()=>{
+
+// RangeNew Slider
+const classes = useStyles();
+const [value, setValue] = React.useState(300);
+
+const handleSliderChange = (event, newValue) => {
+  setValue(newValue);
+  
+
+};
+
+const handleInputChange = event => {
+  setValue(event.target.value === '' ? '' : Number(event.target.value));
+};
+
+const handleBlur = () => {
+  if (value < 1000) {
+    setValue(0);
+  } else if (value > 1000) {
+    setValue(1000);
+  }
+};
+
+
+
+
     const [progress,setProgress]=useState(100) 
     const handleSlide = newProgress => setProgress( newProgress );
 
@@ -160,7 +210,7 @@ return (
 <div className="container justify-content-center">
             
             <div className="d-flex flex-column align-items-center slider ml-5 mt-2">     
-            <div>{`$${progress}`}</div>
+            {/* <div>{`$${progress}`}</div>
             <MultiSlider
                 width={600}
                 height={25}
@@ -181,13 +231,53 @@ return (
 
                 {/* <Progress color="purple" progress={45}>
                 <Dot color="grey" />
-                </Progress> */}
-            </MultiSlider>
+                </Progress> 
+            </MultiSlider> 
+            */}
+{/* Rnage New Slider */}
+
+<div className={classes.root}>
+      
+      <div className="input d-flex justify-content-around">
+      <Grid item>
+          <Input
+            className={classes.input}
+            value={value}
+            margin="dense"
+            onChange={handleInputChange}
+            onBlur={handleBlur}
+            inputProps={{
+              step: 100,
+              min: 500,
+              max: 1000,
+              type: 'number',
+            }}
+          />
+        </Grid>
+      </div>
+
+
+      <Grid container spacing={2} alignItems="center" >
+        <Grid item xs >
+          <Slider 
+            value={typeof value === 'number' ? value : 0}
+            onChange={handleSliderChange}
+            aria-labelledby="input-slider"
+          />
+        </Grid>
+
+      
+      </Grid>
+    
+    </div>
+
+
+
             </div>
             
     </div>
 
-    <section>
+    <section className="mt-5">
                       <div className="animated infinite pulse button-section2-move1 clip-div1 d-flex" id="clip-div1">
                           <button className="btn btn-purple btn-ndh  scroll_btn pulse clip1" id="clip1" onClick={() => next2()}><p class="button-text1">NEXT</p> </button>
                           <i className="fa fa-chevron-circle-right icon movement-icon1"></i>
@@ -239,34 +329,47 @@ return (
 <div className="container justify-content-center">
             
             <div className="d-flex flex-column align-items-center slider ml-5 mt-2">     
-            <div>{`$${progress}`}</div>
-            <MultiSlider
-                width={200}
-                height={25}
-                slidableZoneSize={40}
-                backgroundColor="#dcdcdc"
-                equalColor="#8b6ba3"
-                style={{marginBottom: 40}}
-                onSlide={handleSlide}
-                onDragStart={progress => console.log(`Started dragging: ${progress}%`)}
-                onDragStop={progress => console.log(`Stopped dragging: ${progress}%`)}
-                
-                
-                > 
-                <Progress color="green" progress={progress}>
-                <Dot color="blue"  style={{height:"120px",width:"60px"}}/>
-                </Progress>
+            {/* Rnage New Slider */}
+
+<div className={classes.root}>
+      
+      <div className="input d-flex justify-content-around">
+      <Grid item>
+          <Input
+            className={classes.input}
+            value={value}
+            margin="dense"
+            onChange={handleInputChange}
+            onBlur={handleBlur}
+            inputProps={{
+              step: 100,
+              min: 500,
+              max: 1000,
+              type: 'number',
+            }}
+          />
+        </Grid>
+      </div>
 
 
-                {/* <Progress color="purple" progress={45}>
-                <Dot color="grey" />
-                </Progress> */}
-            </MultiSlider>
+      <Grid container spacing={2} alignItems="center" >
+        <Grid item xs >
+          <Slider 
+            value={typeof value === 'number' ? value : 0}
+            onChange={handleSliderChange}
+            aria-labelledby="input-slider"
+          />
+        </Grid>
+
+      
+      </Grid>
+    
+    </div>
             </div>
             
     </div>
 
-    <section>
+    <section className="mt-5">
                       <div className="animated infinite pulse button-section2-move1 clip-div1 d-flex" id="clip-div1">
                           <button className="btn btn-purple btn-ndh  scroll_btn pulse clip1" id="clip1" onClick={() => next5()}><p class="button-text1">NEXT</p> </button>
                           <i className="fa fa-chevron-circle-right icon movement-icon1"></i>
