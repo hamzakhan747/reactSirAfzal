@@ -12,7 +12,7 @@
     "react-collapsible-component": "^1.1.8",
     "react-dom": "^16.11.0",
     "react-multi-bar-slider": "^1.4.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
